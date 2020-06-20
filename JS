@@ -1,0 +1,11 @@
+var twoSum = function(nums, target) {
+    const ret=[], list=[];
+    for(var i in nums){
+        if(list[nums[i]] != undefined ){
+            ret[0] = list[nums[i]];
+            ret[1] = i;
+        }
+        list[target-nums[i]]=i;  
+    }
+    return ret;
+};
